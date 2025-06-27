@@ -7,4 +7,3 @@ chromadb
 pypdf
 google-generativeai
 gunicorn
-gevent
