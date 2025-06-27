@@ -80,7 +80,7 @@ with app.app_context():
 
 # --- API Routes ---
 # CORRECTED LINE
-@app.route('/ask', methods=)
+@app.route('/ask', methods=['POST'])
 def ask_question():
     if qa_chain is None:
         return jsonify({"error": "Chatbot is not initialized. Check server logs."}), 500
@@ -96,7 +96,7 @@ def ask_question():
         return jsonify({"error": str(e)}), 500
 
 # CORRECTED LINE
-@app.route('/health', methods=)
+@app.route('/health', methods=['GET'])
 def health_check():
     return jsonify({"status": "ok", "chatbot_initialized": qa_chain is not None}), 200
 
