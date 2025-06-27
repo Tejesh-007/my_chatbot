@@ -1,0 +1,34 @@
+# --- Virtual Environment ---
+# This folder contains all the installed Python packages for your specific OS.
+# It can be huge and should be recreated by anyone using your `requirements.txt` file.
+venv/
+
+# --- Vector Database ---
+# This is generated data from your ingestion script. It should not be part
+# of the source code and can become very large.
+chroma_db/
+
+# --- Secret API Keys & Environment Variables ---
+# CRITICAL: This file contains your secret keys. NEVER commit this to Git.
+# Anyone who sees it can use your API keys and spend your money.
+.env
+
+# --- Python Cache ---
+# These are compiled files Python generates automatically. They are not needed.
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# --- IDE/Editor Folders ---
+# User-specific settings for editors like VS Code or PyCharm.
+.vscode/
+.idea/
+
+# --- OS-specific files ---
+# Junk files created by macOS or Windows.
+.DS_Store
+Thumbs.db
+
+# To ignore a specific file by name
+index.html
