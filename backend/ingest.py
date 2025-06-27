@@ -19,7 +19,8 @@ DOCUMENTS_DIR = "./documents"
 # IMPORTANT: This now checks for a 'CHROMA_PERSIST_DIR' environment variable.
 # - On Render, we will set this to '/var/data/chroma_db' to use the persistent disk.
 # - When running locally, it will default to './chroma_db'.
-PERSIST_DIRECTORY = os.getenv('CHROMA_PERSIST_DIR', './chroma_db')
+#PERSIST_DIRECTORY = os.getenv('CHROMA_PERSIST_DIR', './chroma_db')
+PERSIST_DIRECTORY = "./chroma_db"
 
 
 def ingest_documents():
