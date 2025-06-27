@@ -97,5 +97,5 @@ def ingest_documents():
         print("Please ensure your GOOGLE_API_KEY is correctly set in the environment variables and has access to the Gemini API.")
 
 
-if __name__ == "__main__":
-    ingest_documents()
+#if __name__ == "__main__":
+    #ingest_documents()
