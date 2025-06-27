@@ -8,7 +8,7 @@ from langchain_community.vectorstores import Chroma
 from langchain.chains import RetrievalQA
 from langchain.prompts import PromptTemplate
 
-# --- NEW: Import the ingestion function ---
+# Import the ingestion function
 from ingest import ingest_documents
 
 app = Flask(__name__)
@@ -17,12 +17,10 @@ CORS(app)
 PERSIST_DIRECTORY = "./chroma_db"
 qa_chain = None
 
-# --- NEW: Self-contained startup sequence ---
-# This block now runs when the application container starts.
+# --- Self-contained startup sequence ---
 print("--- KICKING OFF APPLICATION STARTUP ---")
 
-# Step 1: Ingest documents from the./documents folder.
-# This creates/updates the chroma_db on the server's temporary disk.
+# Step 1: Ingest documents.
 ingest_documents()
 
 def initialize_chatbot():
@@ -81,6 +79,7 @@ with app.app_context():
     initialize_chatbot()
 
 # --- API Routes ---
+# CORRECTED LINE: Added
 @app.route('/ask', methods=)
 def ask_question():
     if qa_chain is None:
@@ -96,6 +95,7 @@ def ask_question():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
+# CORRECTED LINE: Added
 @app.route('/health', methods=)
 def health_check():
     return jsonify({"status": "ok", "chatbot_initialized": qa_chain is not None}), 200
