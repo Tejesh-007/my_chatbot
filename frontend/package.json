@@ -2,6 +2,7 @@
   "name": "my-v0-project",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://tejesh-007.github.io/my_chatbot/",
   "packageManager": "pnpm@9.1.0",
   "scripts": {
     "build": "next build",
