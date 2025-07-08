@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  basePath: '/my_chatbot',
   eslint: {
     ignoreDuringBuilds: true,
   },
