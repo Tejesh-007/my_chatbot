@@ -46,7 +46,8 @@ jobs:
       - name: Upload production-ready build files
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./frontend/.next # Path to the build output
+          # Change this path from .next to out
+          path: ./frontend/out
 
       - name: Deploy to GitHub Pages
         id: deployment
